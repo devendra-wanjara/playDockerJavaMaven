@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+apk add openjdk11 maven github-cli
