@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  image: wurstmister/zookeeper
+  container_name: zookeeper_local
+  hostname: zookeeper-hostname
+  deploy:
+    mode:global
+    
