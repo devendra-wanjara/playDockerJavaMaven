@@ -1,8 +1,33 @@
 version: "3.9"
 services:
-  image: wurstmister/zookeeper
-  container_name: zookeeper_local
-  hostname: zookeeper-hostname
-  deploy:
-    mode:global
+  zookeeper:
+    image: wurstmister/zookeeper
+    container_name: zookeeper-local
+    hostname: zookeeper-hostname
+    deploy:
+      mode:global
+    ports:
+      - "2181:2181"
+    networks:
+      - dev_network
+  kafka:
+    image: wrustmeister/kafka
+    container_name: kafka-local
+    hostname: kafka-hostname
+    deploy:
+      mode: global
+    depends_on:
+      - zookeeper
+    command: sh -c "
+      echo start_wait_for_kafka &&
+      sleep 30 &&
+      echo kafka_starting &&
+      start-kafka.sh
+    ports:
+      - :9092:9092"
+      
+      
+     
+    
+  
     
