@@ -40,7 +40,7 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
       KAFKA_MESSAGE_MAX_BYTES: 6000000
       KAFKA_ADVERTISED_HOSTNAME: localhost
-    network:
+    networks:
       - dev_network
      
 networks:
