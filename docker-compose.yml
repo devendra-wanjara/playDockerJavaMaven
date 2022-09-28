@@ -44,7 +44,7 @@ services:
       - dev_network
      
 networks:
-  dev_network"
+  dev_network:
     name: local-net
     driver: bridge
     
