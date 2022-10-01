@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  backend:
+    build: backend
+    restart: always
+  
+networks:
+  react-spring: {}
+  spring-mysql: {}
