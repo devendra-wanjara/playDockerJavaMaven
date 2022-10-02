@@ -3,5 +3,7 @@ services:
   backend:
     build:
       context: backend
+      port:
+       - 8080:8080
       
     
