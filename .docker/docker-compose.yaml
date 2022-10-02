@@ -3,5 +3,5 @@ services:
   backend:
     build:
       context: backend
-      target: development
+     
     
