@@ -4,7 +4,4 @@ services:
     build:
       context: backend
       target: development
-
-      port:
-       - 8080:8080
     
