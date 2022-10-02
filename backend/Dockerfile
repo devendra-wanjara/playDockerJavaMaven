@@ -8,5 +8,6 @@ COPY mvnw pom.xml ./
 RUN ./mvnw dependency:resolve
 
 COPY src ./src
+VOLUME /tmp
 
 CMD ["./mvnw", "spring-boot:run"]
