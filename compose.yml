@@ -3,6 +3,9 @@ services:
   backend:
     build: backend
     restart: always
+    volumes:
+      - app:/home/appe
+    container_name: backend
     port:
     - 8080:8080
   
